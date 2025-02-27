@@ -1,0 +1,10 @@
+name: 'my_dbt_project'
+version: '1.0.0'
+config-version: 2
+
+# Profile name should be defined here, which dynamically selects the profile from profiles.yml
+profile: "teste_dbt"  # Dynamically switch profiles using an environment variable
+
+models:
+  my_dbt_project:
+    +schema: staging_dataset  # Schema for BigQuery (if using the BigQuery profile)
